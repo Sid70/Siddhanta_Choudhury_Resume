@@ -1,7 +1,6 @@
 %-------------------------
 % Resume in Latex
 % Author : Siddhanta Choudhury
-% GitHub: https://github.com/Sid70
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -18,16 +17,19 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome}
-\usepackage{ragged2e} % for justifying text
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
-
+\usepackage{ragged2e}
 
 %----------FONT OPTIONS----------
-% % sans-serif
+% sans-serif
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-% % \usepackage[default]{sourcesanspro}
+% \usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -41,11 +43,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -55,7 +57,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\color{BrickRed}\scshape\raggedright\large
+  \vspace{-4pt}\color{BrickRed}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{BrickRed}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -69,10 +71,16 @@
   }
 }
 
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -86,16 +94,17 @@
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -103,13 +112,14 @@
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Siddhanta Choudhury} \\ \vspace{1pt}
     \small \textit{\large Aspiring Software Engineer} \\
-    \href{tel:+918658607379}{\underline{{8658607379}}} $|$ \href{mailto:siddhanta.c1729@gmail.com}{\underline{siddhanta.c1729@gmail.com}} $|$ 
+    \href{tel:+918658607379}{\underline{{+91 8658607379}}} $|$ \href{mailto:siddhanta.c1729@gmail.com}{\underline{siddhanta.c1729@gmail.com}} $|$ 
     Odisha, India $|$
     \href{https://www.linkedin.com/in/siddhanta-choudhury/}{\underline{https://www.linkedin.com/in/siddhanta-choudhury}} $|$
     \href{https://github.com/Sid70}{\underline{https://github.com/Sid70}}
@@ -118,143 +128,137 @@
 %-----------SUMMARY-----------
 \section*{About}
 \begin{justify}
-{As a soon-to-graduate aspiring software engineer skilled in \textbf{Java}, \textbf{C\#}, \textbf{C}, \textbf{C++}, \textbf{Python}, \textbf{PHP}, and \textbf{JavaScript}, as well as \textbf{MySQL}, specializing in full-stack development (including the \textbf{MERN stack} - \textbf{MongoDB}, \textbf{Express.js}, \textbf{React.js}, \textbf{Node.js}), committed to staying updated with the latest tech trends is paramount. With a strong foundation in \textbf{Data Structures and Algorithms (DSA)}, technology is leveraged to innovate, enhance user experiences, and drive project success.}
+{Graduated aspiring Software Engineer proficient in \textbf{Java}, \textbf{C\#}, \textbf{C}, \textbf{C++}, \textbf{Python}, \textbf{PHP}, and \textbf{JavaScript} as well as \textbf{MySQL}. Specializes in \textbf{full-stack development}, particularly skilled with the \textbf{MERN stack} (\textbf{MongoDB}, \textbf{Express.js}, \textbf{React.js}, \textbf{Node.js}). Possesses a strong foundation in \textbf{Data Structures and Algorithms (DSA)}, leveraging technology to innovate, enhance user experiences, and drive project success.}
 \end{justify}
-
+\vspace{-18pt}
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bachelor of Technology in Computer Science \& Engineering}{Dec 2020 -- May 2024}
-      {Sambalpur University Institute of Information Technology, Burla, India}{{\textbf{CGPA:}} {7.70/10.00}}
-    \resumeSubheading
-      {XII - Council of Higher Secondary Education (CHSE) Board, Odisha}{Jul 2018 -- Apr 2019}
-      {Vikash Higher Secondary School, Sambalpur, India}{{\textbf{Percentage:}} {73\%}}
-  \resumeSubHeadingListEnd
-
-
-
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \item \small{\textbf{Programming Languages}: Java, C\# C, C++, JavaScript, Python}
-    \item \small{\textbf{Web Development}: HTML, CSS, JavaScript, PHP, MySQL, MongoDB, React.js, Node.js, Express.js}
-    \item \small{\textbf{Developer Tools}: Git, GitHub, Visual Studio Code, NetBeans IDE, PyCharm, Code::Blocks}
-    \item \small{\textbf{Database}: MySQL, MongoDB}
-\end{itemize}
-
-
-
-\justify
-%-----------EXPERIENCE-----------
-\section{Work Experience}
 \resumeSubHeadingListStart
-
-%-------------------------------------------
 \resumeSubheading
-{\textbf{Apprentice \href{https://drive.google.com/file/d/1yb3f4qoekCHchpvl5ON7zSnXUrwH0Pao/view}{\faExternalLink}}}{Jun 2023 -- Jun 2023}
-{Central Tool Room \& Training Centre (MSME) Government of India}{Bhubaneswar, India}
+{Sambalpur University Institute of Information Technology, Burla}{Dec 2020 - May 2024}{B.Tech in Computer Science \& Engineering}{CGPA: 7.70/10}
+\resumeSubheading
+{Vikash Higher Secondary School, Sambalpur}{July 2018 - Apr 2019}{XII - Science}{Percentage: 73\%}
+\resumeSubHeadingListEnd
+
+% -----------EXPERIENCE-----------
+\section{Internship \& Work Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Central Tool Room \& Training Centre (MSME) Government of India \href{https://drive.google.com/file/d/1yb3f4qoekCHchpvl5ON7zSnXUrwH0Pao/view}{\faExternalLink}}{June 2023 -- June 2023}
+{Apprenticeship}{Bhubaneswar, Odisha}
+\begin{justify}
 \resumeItemListStart
 \resumeItem{Mastering core Java programming skills, specializing in JDBC and Swing framework, while demonstrating proficiency in object-oriented programming, data types, control structures, and exception handling.}
 \resumeItem{Gaining practical proficiency in Java, JDBC, and Swing through hands-on exercises and project work.}
 \resumeItemListEnd
-
-%-------------------------------------------
+\end{justify}
 \resumeSubheading
-{Project Intern \href{https://drive.google.com/file/d/1-nx_JJNNnDPMFFT1Su_ZaUaRVpvAeeM0/view}{\faExternalLink}}{Apr 2023 -- May 2023}
-{Oasis Infobyte}{Remote}
+{Oasis Infobyte \href{https://drive.google.com/file/d/1-nx_JJNNnDPMFFT1Su_ZaUaRVpvAeeM0/view}{\faExternalLink}}{Apr 2023 -- May 2023}
+{Project Intern}{Remote}
+\begin{justify}
 \resumeItemListStart
 \resumeItem{Demonstrating proficiency in front-end technologies, encompassing JavaScript, HTML, and CSS, coupled with practical experience in GitHub utilization and deployment via the platform.}
 \resumeItem{Acquiring familiarity with vital development tools such as Visual Studio Code and Git, ensuring seamless workflow and efficient collaboration within projects.}
 \resumeItem{Executing diverse portfolio projects, ranging from a TO-DO List application to a Calculator and a Tribute Page, showcasing practical application of acquired skills and fostering continuous learning.}
 \resumeItemListEnd
-
+\end{justify}
 \resumeSubHeadingListEnd
 
-
-
-% -----------PROJECTS-----------
+%-----------PROJECTS-----------
 \section{Projects}
+\vspace{-5pt}
+\begin{justify}
 \resumeSubHeadingListStart
-    \resumeProjectHeading
-        {\textbf{CampusNet \href{https://github.com/Sid70/CampusNet}{\faExternalLink}} $|$ \emph{React.Js, Express.Js, MongoDB, Node.Js, Material UI, Git}}{Oct 2023 -- Feb 2024}
-        \resumeItemListStart
-            \resumeItem{CampusNet is a MERN-based social-media platform for college communities, enabling secure registration, login, and sharing of events, multimedia, educational materials, and job posts.}
-            \resumeItem{Allows users to manage account with deletion and deactivation options, search others, and receive notifications.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Image Classification App \href{https://github.com/Sid70/Image-Classification-App}{\faExternalLink}} $|$ \emph{React.Js, ml5.js, Git}}{Nov 2022 -- Dec 2022}
-        \resumeItemListStart
-            \resumeItem{Developed an Image Classification App with ReactJS and integrated the ml5.js API, enabling users to effortlessly categorize images.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{School Management System \href{https://github.com/Sid70/School-Management-System}{\faExternalLink}} $|$ \emph{HTML, CSS, JavaScript, PHP, BootStrap, MySQL, Git}}{Sep 2022 -- Oct 2022}
-        \resumeItemListStart
-            \resumeItem{Comprehensive School Management System with key functionalities like user authentication, registration, profile management, and robust search features.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Bank Management System \href{https://github.com/Sid70/Bank-Mnagement-system-In-C}{\faExternalLink}} $|$ \emph{C , Git , GitHub}}{Nov 2021 -- Dec 2021}
-        \resumeItemListStart
-            \resumeItem{Built a Bank Management System in C, allowing users to perform various banking operations such as account creation, transaction processing, and account management.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Matrix and Determinant Calculator \href{https://github.com/Sid70/Matrix-and-Determinant-Calculator-in-C}{\faExternalLink}} $|$ \emph{C , Git , GitHub}}{Aug 2021 -- Sep 2021}
-        \resumeItemListStart
-            \resumeItem{Implemented a Matrix and Determinant Calculator in C, enabling users to perform matrix operations such as addition, subtraction, and multiplication.}
-            \resumeItem{Incorporated functionalities to calculate determinants and find the inverse of matrices.}
-            \resumeItem{Utilized C programming language to create a user-friendly interface and ensure efficient calculation of matrix operations.}
-        \resumeItemListEnd
-    
+\resumeProjectHeading{\textbf{CampusNet $|$ \emph{React.Js, Express.Js, MongoDB, Node.Js, Material UI, Git}}}{\href{https://github.com/Sid70/CampusNet}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{CampusNet is a MERN-based social-media platform for college communities, enabling secure registration, login, and sharing of events, multimedia, educational materials, and job posts.}
+\resumeItem{Allows users to manage account with deletion and deactivation options, search others, and receive notifications.}
+\resumeItemListEnd
+% ***************************************************
+\resumeProjectHeading{\textbf{Image Classification App $|$ \emph{React.Js, ml5.js, Git}}}{\href{https://github.com/Sid70/Image-Classification-App}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{Developed an Image Classification App with ReactJS and integrated the ml5.js API, enabling users to effortlessly categorize images.}
+\resumeItemListEnd
+% ****************************************************
+\resumeProjectHeading{\textbf{School Management System $|$ \emph{HTML, CSS, JavaScript, PHP, BootStrap, MySQL, Git}}}{\href{https://github.com/Sid70/School-Management-System}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{Comprehensive School Management System with key functionalities like user authentication, registration, profile management, and robust search features.}
+\resumeItemListEnd
+% ****************************************************
+\resumeProjectHeading{\textbf{Bank Management System $|$ \emph{C , Git , GitHub}}}{\href{https://github.com/Sid70/Bank-Mnagement-system-In-C}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{Built a Bank Management System in C, allowing users to perform various banking operations such as account creation, transaction processing, and account management.}
+\resumeItemListEnd
+% ****************************************************
+\resumeProjectHeading{\textbf{Matrix and Determinant Calculator $|$ \emph{C , Git , GitHub}}}{\href{https://github.com/Sid70/Matrix-and-Determinant-Calculator-in-C}{\underline{Source Code}}}
+\resumeItemListStart
+\resumeItem{Implemented a Matrix and Determinant Calculator in C, enabling users to perform matrix operations such as addition, subtraction, and multiplication.}
+\resumeItem{Incorporated functionalities to calculate determinants and find the inverse of matrices.}
+\resumeItem{Utilized C programming language to create a user-friendly interface and ensure efficient calculation of matrix operations.}
+\resumeItemListEnd
+\vspace{-13pt}
+% ****************************************************
+\resumeSubHeadingListEnd
+\end{justify}
+\vspace{-3pt}
+%-----------Technical SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item{
+        \textbf{Programming Languages}{: Java, C\#, C, C++, JavaScript, Python} \\
+        \textbf{Web Development}{: HTML, CSS, JavaScript, PHP, MySQL, MongoDB, React.js, Node.js, Express.js}\\
+        \textbf{Frontend Framework}{: React, TailwindCSS, HTML, CSS, Bootstrap, Material UI} \\
+        \textbf{Databases}{: MySQL, MongoDB} \\
+        \textbf{Developer Tools}{: Postman, Git, GitHub, Visual Studio Code, NetBeans IDE, PyCharm, Code::Blocks} \\
+        }
+\end{itemize}
+\vspace{-15pt}
+
+%-----------Certifications-------------
+\section{Certifications}
+\resumeSubHeadingListStart
+% *******************************************
+\resumeSubheading{Full Stack Web Development \href{https://trainings.internshala.com/view_certificate/9B3A0AA2-A803-BF47-11F5-14676C3F5113/FA1CD614-1868-1D86-30C0-C723850D99F9/}{\faExternalLink}}{}{}{}
+\resumeItemListStart
+\vspace{-4mm}
+\resumeItem{An 8-week online training on Web Development. The training consisted of HTML, CSS, Bootstrap, DBMS, PHP, JS, React, and Final Project modules.}
+\resumeItemListEnd
+% *******************************************
+\resumeSubheading{Programming with C and C++ \href{https://trainings.internshala.com/view_certificate/F7A8BF3B-ACC5-C888-E3D4-4B60C3284DE5/8B7122CB-E39D-A3BC-50C9-DDDFE471AC00/}{\faExternalLink}}{}{}{}
+\resumeItemListStart
+\vspace{-4mm}
+\resumeItem{Trained in C and C++ programming, with a focus on Object-Oriented Programming. Developed a Cricket Game Application as part of the training.}
+\resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%-----------Certifications-----------
-\section{Certifications}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{
-        \item{
-            \textbf{Full Stack Web Development \href{https://trainings.internshala.com/view_certificate/9B3A0AA2-A803-BF47-11F5-14676C3F5113/FA1CD614-1868-1D86-30C0-C723850D99F9/}{\faExternalLink}} \\
-            An 8-week online training on Web Development. The training consisted of HTML, CSS, Bootstrap, DBMS, PHP, JS, React, and Final Project modules.
-        }
-        \item{
-            \textbf{Programming with C and C++ \href{https://trainings.internshala.com/view_certificate/F7A8BF3B-ACC5-C888-E3D4-4B60C3284DE5/8B7122CB-E39D-A3BC-50C9-DDDFE471AC00/}{\faExternalLink}} \\
-            Trained in C and C++ programming, with a focus on Object-Oriented Programming. Developed a Cricket Game Application as part of the training.
-        }
-    }
-\end{itemize}
-
-%-----------Achievements-----------
+% ------------------- Achievements --------------
 \section{Achievements}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{
-        \item{
-            {\textbf{Participation in Hacktoberfest \href{https://www.holopin.io/@sid70}{\faExternalLink}}} \hfill {Oct 2022}
-            \begin{itemize}
-                \item Contributed to and completed 5 pull requests during Hacktoberfest 2022.
-                \item Earned exciting goodies and badges as a result.
-            \end{itemize}
-        }
-        \item{
-            \textbf{Winner of Bits nd Bytes Techwiz \href{https://unstop.com/api/certificate/12a81d6b-87d1-4cd1-8b92-b486f11b2dc1}{\faExternalLink}}} \hfill {Jan 2022}
-            \begin{itemize}
-                \item Secured the first position in 'Bits nd Bytes', a knowledge-boosting computer basics and coding quiz competition.
-                \item Organized by CodeCircle, part of the Innovation Club at SUIIT.
-            \end{itemize}
-        }
-    
-\end{itemize}
+\resumeSubHeadingListStart
+% *******************************************
+\resumeSubheading{Participation in Hacktoberfest \href{https://www.holopin.io/@sid70}{\faExternalLink}}{\hfill {Oct 2022}}{}{}
+\resumeItemListStart
+\vspace{-4mm}
+\resumeItem{Contributed to and completed 5 pull requests during Hacktoberfest 2022.}
+\resumeItem{Earned exciting goodies and badges as a result.}
+\resumeItemListEnd
+% *******************************************
+\resumeSubheading{Winner of Bits nd Bytes Techwiz \href{https://unstop.com/api/certificate/12a81d6b-87d1-4cd1-8b92-b486f11b2dc1}{\faExternalLink}}{Jan 2022}{}{}
+\resumeItemListStart
+\vspace{-4mm}
+\resumeItem{Secured the first position in 'Bits nd Bytes', a knowledge-boosting computer basics and coding quiz competition.}
+\resumeItem{Organized by CodeCircle, part of the Innovation Club at SUIIT.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
-
-
-
- % Languages ----------------------------------
+% Languages ----------------------------------
 \section{Languages}
 \begin{itemize}[leftmargin=0.15in, label={}]
-    \item \textbf{Hindi:} Native Proficiency
-    \item \textbf{English:} Professional Proficiency
-    \item \textbf{Odia:} Native Proficiency
+  \item{
+        \textbf{English:}{ Professional Proficiency} \\
+        \textbf{Hindi}{: Professional Proficiency}\\
+        \textbf{Odia}{: Native Proficiency}\\
+        }
 \end{itemize}
 
-
-%-------------------------------------------
 \end{document}
